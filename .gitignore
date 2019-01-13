@@ -1,0 +1,5 @@
+**/.DS_Store/*
+**/.vscode/*
+**/__scratch__/*
+**/node_modules/*
+**/dist/*
