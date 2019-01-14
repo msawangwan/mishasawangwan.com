@@ -1,0 +1,28 @@
+.full-page {
+    width: 100vw;
+    height: 100vh;
+}
+
+.fill-container {
+    width: 100%;
+    height: 100%;
+}
+
+.modular-grid {
+    display: grid;
+}
+
+.modular-grid.container {
+    grid-template-columns: 10% repeat(10, 1fr) 10%;
+    grid-template-rows: 10% 1fr 2fr 10%;
+    grid-gap: 0.2em;
+}
+
+.page-text {
+    color: hsl(0, 0%, 100%);
+}
+
+.page-bg {
+    background: blue;
+    z-index: 2;
+}

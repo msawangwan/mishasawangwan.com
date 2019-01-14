@@ -1,0 +1,16 @@
+.fibonacci-col-grid {
+    display: grid;
+    grid-template-columns: 33% 67%;
+}
+
+.fibonacci-row-grid {
+    display: grid;
+    grid-template-rows: 67% 33%;
+}
+
+.fibonacci-rect {
+    background: hsl(60, 65%, 50%);
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid hsl(244, 35%, 50%);
+}
