@@ -1,3 +1,10 @@
+/* font-family: 'PT Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Staatliches',
+cursive; */
+
+/* font-family: 'Fira Sans', sans-serif; */
+
 .full-page {
     width: 100vw;
     height: 100vh;
@@ -18,11 +25,52 @@
     grid-gap: 0.2em;
 }
 
+.modular-grid.paragraphs {
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-gap: 0.5em;
+}
+
 .page-text {
-    color: hsl(0, 0%, 100%);
+    /* color: hsl(0, 0%, 100%); */
+    color: hsl(36, 65%, 54%);
+    line-height: 1.2;
 }
 
 .page-bg {
-    background: blue;
+    background: hsl(36, 65%, 54%);
     z-index: 2;
+}
+
+.content-bg {
+    background: hsl(217, 70%, 32%);
+    z-index: 0;
+}
+
+.paragraphs {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 1.375em;
+}
+
+.title {
+    padding-top: 0.1em;
+    padding-bottom: 0.375em;
+    padding-left: 0.5em;
+    padding-right: 0.375em;
+}
+
+.page-text.title {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 900;
+}
+
+.paragraph-font {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+}
+
+li {
+    padding-left: 1.2375em;
 }
