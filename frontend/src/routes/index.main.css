@@ -8,8 +8,8 @@ a {
 }
 
 a:link {
-    color: hsl(36, 65%, 54%);
-    background: hsl(217, 70%, 32%);
+    color: white;
+    background: black;
 }
 
 a:visited {}
@@ -17,16 +17,11 @@ a:visited {}
 a:focus {}
 
 a:hover {
-    color: hsl(217, 70%, 32%);
-    background: hsl(36, 65%, 54%);
+    color: black;
+    background: white;
 }
 
 a:active {}
-
-.full-page {
-    width: 100vw;
-    height: 100vh;
-}
 
 .fill-container {
     width: 100%;
@@ -41,20 +36,20 @@ a:active {}
     flex-direction: row;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .grid {
     display: grid;
 }
 
-.grid.col-12-row-4 {
-    grid-template-columns: 10% repeat(10, 1fr) 10%;
-    grid-template-rows: 10% 1fr 2fr 10%;
-    grid-gap: 0.2em;
+.flex {
+    display: flex;
 }
 
-.grid.col-1-row-fluid {
-    grid-template-columns: 100%;
-    grid-auto-rows: minmax(min-content, max-content);
-    grid-gap: 0.5em;
+.foreground {
+    z-index: 5;
 }
 
 .light.background {
@@ -81,7 +76,7 @@ a:active {}
 
 .title.padded {
     padding-top: 0.1em;
-    padding-bottom: 0.375em;
+    padding-bottom: 0.575em;
     padding-left: 0.5em;
     padding-right: 0.375em;
 }
@@ -112,3 +107,172 @@ a:active {}
     padding-left: 0.85em;
     padding-right: 1.375em;
 }
+
+/* mq independent */
+
+.viewport-width {
+    width: 100vw;
+}
+
+.viewport-height {
+    height: 100vh;
+}
+
+.relative-position {
+    position: relative;
+}
+
+.fluid-grid {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.skyline-image {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        font-size: 0.8em;
+    }
+    .fluid-grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2.5vw 1fr 2.5vw;
+        grid-gap: 0.125em;
+    }
+    .whats-my-name {
+        grid-area: 1 / 2 / 2 / 2;
+        font-weight: 900;
+        letter-spacing: 0.125em;
+    }
+    .who-am-i {
+        grid-area: 2 / 2 / 3 / 2;
+    }
+    .langs-i-know {
+        grid-area: 3 / 2 / 4 / 2;
+    }
+    .frameworks-i-love {
+        grid-area: 4 / 2 / 5 / 2;
+    }
+    .tech-i-use {
+        grid-area: 5 / 2 / 6 / 2;
+    }
+    .me-on-the-web {
+        grid-area: 6 / 2 / 7 / 2;
+    }
+    li {
+        line-height: 1.4;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    body {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    body {
+        font-size: 1em;
+    }
+    .fluid-grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2.5vw auto 1fr 1fr 2.5vw;
+        grid-gap: 0.125em;
+    }
+    .panel {
+        color: white;
+        background: black;
+        padding-left: 0.425em;
+        padding-right: 0.425em;
+        padding-bottom: 0.24em;
+        padding-top: 0.24em;
+    }
+    .skyline-image {
+        position: sticky;
+        top: 1px;
+    }
+    .whats-my-name {
+        writing-mode: vertical-lr;
+        grid-area: 1 / 2 / 4 / 2;
+        font-weight: 900;
+        letter-spacing: 0.25em;
+        line-height: 1.3;
+        padding-top: 0.85em;
+    }
+    .who-am-i {
+        grid-area: 4 / 2 / 5 / 2;
+    }
+    .langs-i-know {
+        grid-area: 1 / 3 / 2 / 3;
+    }
+    .frameworks-i-love {
+        grid-area: 2 / 4 / 3 / 4;
+    }
+    .tech-i-use {
+        grid-area: 3 / 3 / 4 / 3;
+    }
+    .me-on-the-web {
+        grid-area: 4 / 4 / 5 / 4;
+    }
+    li {
+        line-height: 1.45;
+    }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1800px) {
+    body {
+        font-size: 1.34em;
+    }
+    .fluid-grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2.5vw auto 1fr 1fr 2.5vw;
+        grid-gap: 0.125em;
+    }
+    .panel {
+        color: white;
+        background: black;
+        padding-left: 0.425em;
+        padding-right: 0.425em;
+        padding-bottom: 0.424em;
+        padding-top: 0.24em;
+    }
+    .skyline-image {
+        position: sticky;
+        top: 1px;
+    }
+    .whats-my-name {
+        writing-mode: vertical-lr;
+        grid-area: 1 / 2 / 4 / 2;
+        font-weight: 900;
+        letter-spacing: 0.35em;
+        line-height: 1.3;
+        padding-top: 0.85em;
+        /* padding-left: 0.42em; */
+        /* padding-right: 0.42em; */
+    }
+    .who-am-i {
+        grid-area: 1 / 3 / 2 / 3;
+    }
+    .langs-i-know {
+        grid-area: 2 / 4 / 3 / 4;
+    }
+    .frameworks-i-love {
+        grid-area: 3 / 4 / 4 / 4;
+    }
+    .tech-i-use {
+        grid-area: 4 / 4 / 5 / 4;
+    }
+    .me-on-the-web {
+        grid-area: 2 / 3 / 3 / 3;
+    }
+    li {
+        line-height: 1.45;
+    }
+}
+
+@media only screen and (min-width: 1801px) {}

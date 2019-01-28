@@ -40,7 +40,8 @@ module.exports = (env, argv) => {
             extensions: ['*', '.js', '.jsx'],
             alias: {
                 components: path.resolve(__dirname, 'src/components'),
-                content: path.resolve(__dirname, 'src/content'),
+                content: path.resolve(__dirname, 'asset/content'),
+                image: path.resolve(__dirname, 'asset/img'),
             }
         },
         output: {

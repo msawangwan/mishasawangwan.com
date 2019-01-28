@@ -8,13 +8,13 @@ import {
 } from 'react-router-dom';
 
 import {
-    TrackOverlay,
-} from 'components';
-
-import {
     socialMedia,
     techStack,
 } from 'content';
+
+import {
+    sfSkyline,
+} from 'image';
 
 import './reset.css';
 import './index.main.css';
@@ -23,11 +23,11 @@ const Paragraph = props =>
     <div
         className={`${props.className && props.className}`}
         style={{
-            // 'border': 'solid red thick',
+            'border': 'solid red thick',
             ...props.style
         }}>
         {props.children}
-    </div >
+    </div >;
 
 const UnorderedListOfText = props =>
     <ul className={`${props.className && props.className}`}>
@@ -39,7 +39,7 @@ const UnorderedListOfText = props =>
                     {k}
                 </li>)
         }
-    </ul>
+    </ul>;
 
 const UnorderedListOfLinks = props =>
     <ul className={`${props.className && props.className}`}>
@@ -56,84 +56,54 @@ const UnorderedListOfLinks = props =>
                     </a>
                 </li>)
         }
-    </ul>
+    </ul>;
 
-const App = () =>
-    <div className='full-page grid col-12-row-4 light background'>
-        {/* <TrackOverlay columns={12} rows={4} /> */}
 
-        <div
-            className='dark background bordered'
-            style={{
-                'gridArea': '2 / 2 / 3 / 8',
-                'display': 'flex',
-                'alignItems': 'flex-end',
-            }}>
-            <div className='title padded font'>
-                <h1>msawangwan</h1>
-            </div>
-            {/* <div className='paragraph-text title title-font'>
-                <h3>stay hungry</h3>
-            </div> */}
-        </div>
+class App extends React.Component {
+    constructor(props) {
+        super(props);
 
-        <div
-            className='dark background bordered'
-            style={{
-                'gridArea': '3 / 2 / 4 / 5',
-            }}>
-            <div className='paragraphs padded vertical fill-container'>
-                <Paragraph className='paragraph font gap'>
-                    hi my name is misha.
-                </Paragraph>
-                <Paragraph className='paragraph font gap'>
-                    a fullstack developer from the san francisco bay area.
-                </Paragraph>
-            </div>
-        </div>
+        this.handleOnClick = this.handleOnClick.bind(this);
+    }
 
-        <div
-            className='dark background bordered'
-            style={{
-                'gridArea': '3 / 5 / 4 / 8',
-            }}>
-            <div className='paragraphs padded vertical fill-container'>
-                <Paragraph className='paragraph font gap'>
-                    some dialects i know:
-                </Paragraph>
-                <Paragraph className='paragraph font gap'>
-                    <UnorderedListOfText className='paragraph-text' elements={techStack['lang']} />
-                </Paragraph>
-                <Paragraph className='paragraph font gap'>
-                    a few frameworks i love:
-                </Paragraph>
-                <Paragraph className='paragraph font gap'>
-                    <UnorderedListOfText className='paragraph-text' elements={techStack['framework']} />
-                </Paragraph>
-                <Paragraph className='paragraph font gap'>
-                    top tech i use daily:
-                </Paragraph>
-                <Paragraph className='paragraph font gap'>
-                    <UnorderedListOfText className='paragraph-text' elements={techStack['tech']} />
-                </Paragraph>
-            </div>
-        </div>
+    handleOnClick(e, id) {
+    }
 
-        <div
-            className='dark background bordered'
-            style={{
-                'gridArea': '3 / 8 / 4 / 11',
-            }}>
-            <div className='paragraphs padded vertical fill-container'>
-                <Paragraph className='paragraph font gap'>
-                    find me on:
-                </Paragraph>
-                <Paragraph className='paragraph font gap'>
-                    <UnorderedListOfLinks className='paragraph-text' elements={socialMedia} />
-                </Paragraph>
-            </div>
-        </div>
-    </div>;
+    render() {
+        return (
+            <React.Fragment>
+                <div className='viewport-width relative-position'>
+                    <img className='skyline-image' src={sfSkyline} />
+                    <div className='fluid-grid' >
+                        <header className='panel whats-my-name'>
+                            <h1>msawangwan</h1>
+                        </header>
+                        <section className='panel who-am-i'>
+                            <p>i'm misha.</p>
+                            <p>a fullstack developer from the san francisco bay area.</p>
+                        </section>
+                        <section className='panel langs-i-know'>
+                            <p>some dialects i know:</p>
+                            <UnorderedListOfText elements={techStack['lang']} />
+                        </section>
+                        <section className='panel frameworks-i-love'>
+                            <p>a few frameworks i love:</p>
+                            <UnorderedListOfText elements={techStack['framework']} />
+                        </section>
+                        <section className='panel tech-i-use'>
+                            <p>tech i use daily:</p>
+                            <UnorderedListOfText elements={techStack['tech']} />
+                        </section>
+                        <section className='panel me-on-the-web'>
+                            <p>find me on:</p>
+                            <UnorderedListOfLinks elements={socialMedia} />
+                        </section>
+                    </div>
+                </div>
+            </React.Fragment>
+        );
+    }
+}
 
 const Entry = () =>
     <BrowserRouter>

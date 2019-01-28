@@ -19,7 +19,7 @@ func main() {
 	router := webpack.NewRouter()
 
 	router.GET("/$", entrypoints.ServeHTTP)
-	router.GET("(\\.js|\\.json|\\.css|\\.png|\\.gif|\\.jpe?g|\\.ico)$", resources.ServeHTTP)
+	router.GET("(\\.js|\\.json|\\.css|\\.png|\\.gif|\\.svg|\\.jpe?g|\\.ico)$", resources.ServeHTTP)
 
 	server := &http.Server{
 		Addr:    "127.0.0.1:1337",
