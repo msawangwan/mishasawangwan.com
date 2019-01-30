@@ -275,4 +275,51 @@ a:active {}
     }
 }
 
-@media only screen and (min-width: 1801px) {}
+@media only screen and (min-width: 1801px) {
+    /* todo: THIS IS ALL PLACEHOLDER AND A DIRECT COPY FROM THE ABOVE BREAKPOINT */
+    body {
+        font-size: 1.34em;
+    }
+    .fluid-grid {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2.5vw auto 1fr 1fr 2.5vw;
+        grid-gap: 0.125em;
+    }
+    .panel {
+        color: white;
+        background: black;
+        padding-left: 0.425em;
+        padding-right: 0.425em;
+        padding-bottom: 0.424em;
+        padding-top: 0.24em;
+    }
+    .whats-my-name {
+        writing-mode: vertical-lr;
+        grid-area: 1 / 2 / 4 / 2;
+        font-weight: 900;
+        letter-spacing: 0.35em;
+        line-height: 1.3;
+        padding-top: 0.85em;
+        /* padding-left: 0.42em; */
+        /* padding-right: 0.42em; */
+    }
+    .who-am-i {
+        grid-area: 1 / 3 / 2 / 3;
+    }
+    .langs-i-know {
+        grid-area: 2 / 4 / 3 / 4;
+    }
+    .frameworks-i-love {
+        grid-area: 3 / 4 / 4 / 4;
+    }
+    .tech-i-use {
+        grid-area: 4 / 4 / 5 / 4;
+    }
+    .me-on-the-web {
+        grid-area: 2 / 3 / 3 / 3;
+    }
+    li {
+        line-height: 1.45;
+    }
+}
