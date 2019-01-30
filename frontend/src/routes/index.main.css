@@ -128,7 +128,7 @@ a:active {}
 
 .skyline-image {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     z-index: -1;
 }
 
@@ -173,6 +173,14 @@ a:active {}
     }
 }
 
+@media only screen and (min-width: 901px) {
+    .skyline-image {
+        position: -webkit-sticky;
+        position: sticky;
+        top: -1px;
+    }
+}
+
 @media only screen and (min-width: 901px) and (max-width: 1200px) {
     body {
         font-size: 1em;
@@ -190,10 +198,6 @@ a:active {}
         padding-right: 0.425em;
         padding-bottom: 0.24em;
         padding-top: 0.24em;
-    }
-    .skyline-image {
-        position: sticky;
-        top: 1px;
     }
     .whats-my-name {
         writing-mode: vertical-lr;
@@ -240,10 +244,6 @@ a:active {}
         padding-right: 0.425em;
         padding-bottom: 0.424em;
         padding-top: 0.24em;
-    }
-    .skyline-image {
-        position: sticky;
-        top: 1px;
     }
     .whats-my-name {
         writing-mode: vertical-lr;
