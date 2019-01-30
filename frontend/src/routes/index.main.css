@@ -98,6 +98,8 @@ a:active {}
 
 @media only screen and (min-width: 901px) {
     .skyline-image {
+        display: block;
+        padding-bottom: 0.3em;
         position: -webkit-sticky;
         position: sticky;
         top: -1px;
