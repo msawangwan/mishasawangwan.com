@@ -1,3 +1,10 @@
+:root {
+    --light: hsl(36, 65%, 54%);
+    --light-light: hsl(217, 74%, 87%);
+    --dark: hsl(217, 70%, 32%);
+    --dark-dark: hsl(217, 69%, 21%);
+}
+
 li {
     padding-left: 1.2375em;
 }
@@ -23,92 +30,9 @@ a:hover {
 
 a:active {}
 
-.fill-container {
-    width: 100%;
-    height: 100%;
-}
-
-.vertical {
-    flex-direction: column;
-}
-
-.horizontal {
-    flex-direction: row;
-}
-
 .italic {
     font-style: italic;
 }
-
-.grid {
-    display: grid;
-}
-
-.flex {
-    display: flex;
-}
-
-.foreground {
-    z-index: 5;
-}
-
-.light.background {
-    background: hsl(36, 65%, 54%);
-    z-index: 0;
-}
-
-.dark.background {
-    background: hsl(217, 70%, 32%);
-    z-index: 2;
-}
-
-.dark.background.bordered {
-    border-top: solid 0.15em hsl(217, 69%, 21%);
-    border-right: solid 0.15em hsl(217, 69%, 21%);
-    border-bottom: solid 0.05em hsl(217, 74%, 87%);
-    border-left: solid 0.05em hsl(217, 74%, 87%);
-}
-
-.title,
-.paragraph {
-    color: hsl(36, 65%, 54%);
-}
-
-.title.padded {
-    padding-top: 0.1em;
-    padding-bottom: 0.575em;
-    padding-left: 0.5em;
-    padding-right: 0.375em;
-}
-
-.title.font {
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 900;
-    letter-spacing: 0.125em;
-}
-
-.paragraph.font {
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 400;
-    line-height: 1.2;
-}
-
-.paragraph.gap {
-    padding-bottom: 0.5em;
-}
-
-.paragraphs {
-    display: flex;
-}
-
-.paragraphs.padded {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 0.85em;
-    padding-right: 1.375em;
-}
-
-/* mq independent */
 
 .viewport-width {
     width: 100vw;
@@ -128,7 +52,6 @@ a:active {}
 
 .skyline-image {
     width: 100%;
-    /* height: 100%; */
     z-index: -1;
 }
 
