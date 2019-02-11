@@ -1,0 +1,15 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --light: hsl(36, 65%, 54%);
+    --light-light: hsl(217, 74%, 87%);
+    --dark: hsl(217, 70%, 32%);
+    --dark-dark: hsl(217, 69%, 21%);
+    --pt-huge: 5.653em;
+    --pt-banner: 3.998em;
+    --pt-header: 2.827em;
+    --pt-subheader: 1.999em;
+    --pt-base: 1.414em;
+    --pt-mini: 1em;
+    --pt-micro: 0.707em;
+}

@@ -1,0 +1,21 @@
+/*
+    modular scale based on a ratio of 1.414
+*/
+
+:root {
+    --font-size-xxxl: 5.653em;
+    --font-size-xxl: 3.998em;
+    --font-size-xl: 2.827em;
+    --font-size-l: 1.999em;
+    --font-size-m: 1.414em;
+    --font-size-s: 1em;
+    --font-size-xs: 0.707em;
+}
+
+div {
+    font-size: var(--font-size-s);
+}
+
+h1 {
+    font-size: var(--font-size-xl);
+}

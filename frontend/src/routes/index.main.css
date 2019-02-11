@@ -1,14 +1,3 @@
-:root {
-    --light: hsl(36, 65%, 54%);
-    --light-light: hsl(217, 74%, 87%);
-    --dark: hsl(217, 70%, 32%);
-    --dark-dark: hsl(217, 69%, 21%);
-}
-
-li {
-    padding-left: 1.2375em;
-}
-
 a {
     outline: none;
     text-decoration: none;
@@ -30,6 +19,10 @@ a:hover {
 
 a:active {}
 
+li {
+    padding-left: 1.2375em;
+}
+
 .italic {
     font-style: italic;
 }
@@ -46,13 +39,26 @@ a:active {}
     position: relative;
 }
 
-.fluid-grid {
-    font-family: 'Fira Sans', sans-serif;
+.text-speed {
+    text-rendering: optimizeSpeed;
+}
+
+.text-legibility {
+    text-rendering: optimizeLegibility;
+}
+
+.banner {
+    overflow: hidden;
+    z-index: -1;
 }
 
 .skyline-image {
     width: 100%;
-    z-index: -1;
+    z-index: -2;
+}
+
+.fluid-grid {
+    font-family: 'Fira Sans', sans-serif;
 }
 
 @media only screen and (max-width: 900px) {
@@ -63,12 +69,15 @@ a:active {}
         display: grid;
         width: 100%;
         grid-template-columns: 2.5vw 1fr 2.5vw;
-        grid-gap: 0.125em;
+        grid-gap: 0.625em;
+        letter-spacing: 0.0425em;
+        line-height: 1.45;
     }
     .whats-my-name {
         grid-area: 1 / 2 / 2 / 2;
         font-weight: 900;
-        letter-spacing: 0.125em;
+        /* letter-spacing: 0.125em; */
+        letter-spacing: 0.225em;
     }
     .who-am-i {
         grid-area: 2 / 2 / 3 / 2;
@@ -85,8 +94,13 @@ a:active {}
     .me-on-the-web {
         grid-area: 6 / 2 / 7 / 2;
     }
+    .who-am-i>p {
+        padding: 0.18em 0;
+    }
     li {
-        line-height: 1.4;
+        line-height: 1.29;
+        font-size: 0.9em;
+        border-left: 1px solid black;
     }
 }
 
@@ -97,12 +111,26 @@ a:active {}
 }
 
 @media only screen and (min-width: 901px) {
-    .skyline-image {
-        display: block;
+    li {
+        border-left: 1px solid white;
+    }
+    .banner {
         padding-bottom: 0.3em;
         position: -webkit-sticky;
         position: sticky;
         top: -1px;
+    }
+    .panel {
+        color: white;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .whats-my-name {
+        flex-direction: row;
+        writing-mode: vertical-lr;
+        font-weight: 900;
     }
 }
 
@@ -114,23 +142,16 @@ a:active {}
         display: grid;
         width: 100%;
         grid-template-columns: 2.5vw auto 1fr 1fr 2.5vw;
-        grid-gap: 0.125em;
+        grid-gap: 0.185em;
+        letter-spacing: 0.088em;
+        line-height: 1.48;
     }
     .panel {
-        color: white;
-        background: black;
-        padding-left: 0.425em;
-        padding-right: 0.425em;
-        padding-bottom: 0.24em;
-        padding-top: 0.24em;
+        padding: 0.8em 1.2em;
     }
     .whats-my-name {
-        writing-mode: vertical-lr;
         grid-area: 1 / 2 / 4 / 2;
-        font-weight: 900;
-        letter-spacing: 0.25em;
-        line-height: 1.3;
-        padding-top: 0.85em;
+        letter-spacing: 0.4em;
     }
     .who-am-i {
         grid-area: 4 / 2 / 5 / 2;
@@ -147,12 +168,22 @@ a:active {}
     .me-on-the-web {
         grid-area: 4 / 4 / 5 / 4;
     }
+    .who-am-i>p {
+        padding: 0.16em 0;
+    }
+    ul {
+        padding-top: 0.22em;
+    }
     li {
-        line-height: 1.45;
+        line-height: 1.34;
+        font-size: 0.9em;
+        border-left: 0.08em solid white;
     }
 }
 
-@media only screen and (min-width: 1201px) and (max-width: 1800px) {
+/* add if wanting to seperate very large screens into another layout: and (max-width: 1800px) */
+
+@media only screen and (min-width: 1201px) {
     body {
         font-size: 1.34em;
     }
@@ -160,25 +191,16 @@ a:active {}
         display: grid;
         width: 100%;
         grid-template-columns: 2.5vw auto 1fr 1fr 2.5vw;
-        grid-gap: 0.125em;
+        grid-gap: 0.185em;
+        letter-spacing: 0.088em;
+        line-height: 1.38;
     }
     .panel {
-        color: white;
-        background: black;
-        padding-left: 0.425em;
-        padding-right: 0.425em;
-        padding-bottom: 0.424em;
-        padding-top: 0.24em;
+        padding: 0.825em;
     }
     .whats-my-name {
-        writing-mode: vertical-lr;
         grid-area: 1 / 2 / 4 / 2;
-        font-weight: 900;
-        letter-spacing: 0.35em;
-        line-height: 1.3;
-        padding-top: 0.85em;
-        /* padding-left: 0.42em; */
-        /* padding-right: 0.42em; */
+        letter-spacing: 0.65em;
     }
     .who-am-i {
         grid-area: 1 / 3 / 2 / 3;
@@ -193,58 +215,19 @@ a:active {}
         grid-area: 4 / 4 / 5 / 4;
     }
     .me-on-the-web {
-        grid-area: 2 / 3 / 3 / 3;
+        grid-area: 2 / 3 / 4 / 3;
+    }
+    .who-am-i>p {
+        padding: 0.44em 0;
+    }
+    ul {
+        padding-top: 0.42em;
     }
     li {
-        line-height: 1.45;
+        line-height: 1.24;
+        font-size: 0.84em;
+        border-left: 0.24em solid white;
     }
 }
 
-@media only screen and (min-width: 1801px) {
-    /* todo: THIS IS ALL PLACEHOLDER AND A DIRECT COPY FROM THE ABOVE BREAKPOINT */
-    body {
-        font-size: 1.34em;
-    }
-    .fluid-grid {
-        display: grid;
-        width: 100%;
-        grid-template-columns: 2.5vw auto 1fr 1fr 2.5vw;
-        grid-gap: 0.125em;
-    }
-    .panel {
-        color: white;
-        background: black;
-        padding-left: 0.425em;
-        padding-right: 0.425em;
-        padding-bottom: 0.424em;
-        padding-top: 0.24em;
-    }
-    .whats-my-name {
-        writing-mode: vertical-lr;
-        grid-area: 1 / 2 / 4 / 2;
-        font-weight: 900;
-        letter-spacing: 0.35em;
-        line-height: 1.3;
-        padding-top: 0.85em;
-        /* padding-left: 0.42em; */
-        /* padding-right: 0.42em; */
-    }
-    .who-am-i {
-        grid-area: 1 / 3 / 2 / 3;
-    }
-    .langs-i-know {
-        grid-area: 2 / 4 / 3 / 4;
-    }
-    .frameworks-i-love {
-        grid-area: 3 / 4 / 4 / 4;
-    }
-    .tech-i-use {
-        grid-area: 4 / 4 / 5 / 4;
-    }
-    .me-on-the-web {
-        grid-area: 2 / 3 / 3 / 3;
-    }
-    li {
-        line-height: 1.45;
-    }
-}
+@media only screen and (min-width: 1801px) {}
