@@ -19,6 +19,14 @@ export const socialMedia = [
         'label': 'ig',
         'href': 'https://www.instagram.com/mad.meesh/',
     },
+    {
+    	'label': 'soundcloud',
+	'href': 'https://soundcloud.com/madmeesh'
+    },
+    {
+    	'label': 'yt',
+	'href': 'https://www.youtube.com/channel/UC7-PqY6XuocastyKeFvHEtA'
+    }
 ];
 
 export const techStack = {
